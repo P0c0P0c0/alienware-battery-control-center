@@ -1,0 +1,7 @@
+{
+  "uuid": "bat07-widget@alienware.local",
+  "name": "BAT-07 Window Placement",
+  "description": "Pins the BAT-07 GTK widget above other windows and places it in the upper-right corner.",
+  "shell-version": ["50"],
+  "version": 1
+}

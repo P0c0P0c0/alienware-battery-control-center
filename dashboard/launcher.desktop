@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=BAT-07 Alienware Battery
+Comment=Tampilkan widget baterai Alienware
+Exec=@EXEC@
+Icon=battery
+Terminal=false
+Categories=Utility;
+StartupWMClass=io.github.bat07.Widget

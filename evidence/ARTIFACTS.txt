@@ -1,0 +1,7 @@
+Qualification scope: local build, inspection, extraction and reproducibility.
+- Portable source archive and both architecture-independent Debian payloads built without network or system package changes.
+- Archive entries were compared against the source manifest and allowlisted runtime package paths. Ownership, modes, file bytes and SHA256 were checked. The Debian control archives contain only control metadata and no maintainer scripts.
+- Both Debian packages extracted into separate temporary directories. Their principal runtime sources matched the release tree.
+- A rebuild from the extracted portable source produced byte-identical archive and package artifacts, and a byte-identical SHA256 manifest.
+- Scanned source text for common credential formats, private-key headers, personal paths and host identities. No matches. The file inventory and archive inspection excluded database, recovery archive, private log, machine manifest and symlink payloads.
+- Live activation, compositor behavior, and remote CI are outside this qualification.

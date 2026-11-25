@@ -1,0 +1,89 @@
+/* Use GTK-drawn surfaces and control geometry, without theme image assets. */
+#bat07-window, #bat07-window *,
+#bat07-settings, #bat07-settings *,
+tooltip, tooltip * {
+    -gtk-icon-source: none;
+    background-image: none;
+    border-image: none;
+}
+#bat07-window {
+    background-color: #111821;
+    color: #e8f1fa;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+#bat07-window #surface {
+    background-image: linear-gradient(to bottom, #1a252f, #111821 130px);
+    border: 1px solid #344452;
+    padding: 12px 15px;
+}
+#bat07-window .brand {
+    color: #6ce8fa;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+#bat07-window .muted { color: #a8b7c5; }
+#bat07-window .good { color: #75e3af; }
+#bat07-window .warning { color: #ffbf71; }
+#bat07-window .danger { color: #ff8993; }
+#bat07-window .section { color: #e9f3fc; font-weight: bold; }
+#bat07-window .small { font-size: 11px; }
+#bat07-window .panel {
+    background-color: #141e28;
+    border: 1px solid #2b3948;
+    border-radius: 7px;
+    padding: 7px 9px;
+}
+#bat07-window .gauge-value {
+    color: #edf7ff;
+    font-size: 19px;
+    font-weight: bold;
+    font-feature-settings: "tnum";
+}
+#bat07-window .reading { font-feature-settings: "tnum"; }
+#bat07-window button, #bat07-settings button {
+    background: #1c2935;
+    color: #b8cbd9;
+    border: 1px solid #354554;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 5px;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 0 4px;
+}
+#bat07-window button:hover { background: #253c4a; color: #aaf2fc; }
+#bat07-window button:focus { border-color: #78dbe9; }
+#bat07-window button:checked {
+    background: #234854;
+    border-color: #549aa9;
+    color: #d0faff;
+}
+#bat07-window .period button {
+    min-height: 20px;
+    min-width: 30px;
+    padding: 0 3px;
+    font-size: 11px;
+    border-radius: 0;
+}
+#bat07-window .period button:first-child { border-radius: 5px 0 0 5px; }
+#bat07-window .period button:last-child { border-radius: 0 5px 5px 0; }
+#bat07-settings {
+    color: #e8f1fa;
+    background-color: #1a2632;
+    border-color: #354554;
+}
+#bat07-settings scale trough {
+    background: #344452;
+    min-height: 4px;
+}
+#bat07-settings scale slider { background: #6ce8fa; }
+#bat07-window #dashboard-scroll viewport { background-color: #111821; }
+#bat07-window #bat07-clock {
+    background-color: transparent;
+    color: #a8b7c5;
+    font-size: 11px;
+    border: none;
+    padding: 0;
+}

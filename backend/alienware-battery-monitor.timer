@@ -1,0 +1,12 @@
+[Unit]
+Description=BAT-05 battery sampling every five minutes
+
+[Timer]
+OnBootSec=1min
+OnCalendar=*:0/5
+AccuracySec=1s
+WakeSystem=no
+Persistent=false
+
+[Install]
+WantedBy=timers.target

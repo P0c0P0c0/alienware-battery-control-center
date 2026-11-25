@@ -1,0 +1,4 @@
+Installed BAT-05: all 6 managed file hashes match the installed manifest and source.
+Installed BAT-07: all 10 managed file hashes match the installed R7.2 manifest. Non-generated files match staged R7.2; the launcher is generated.
+Original BAT-05 and staged R7.2 source manifests verified. System/unit state could not be queried from this workspace. Database content was not opened during release preparation.
+All six systemd unit/timer files are byte-identical to their source revisions.

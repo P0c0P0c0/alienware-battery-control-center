@@ -1,0 +1,11 @@
+[Unit]
+Description=BAT-05 desktop alert check
+PartOf=graphical-session.target
+
+[Timer]
+OnActiveSec=15s
+OnUnitActiveSec=1min
+WakeSystem=no
+
+[Install]
+WantedBy=graphical-session.target

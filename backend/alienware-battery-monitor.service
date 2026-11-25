@@ -1,0 +1,26 @@
+[Unit]
+Description=BAT-05 Alienware battery monitor
+OnFailure=alienware-battery-monitor-failure.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/alienware-battery-monitor/monitor.py sample
+TimeoutStartSec=60
+User=root
+Group=alienware-battery-monitor
+UMask=0027
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+PrivateTmp=yes
+PrivateDevices=yes
+PrivateNetwork=yes
+RestrictAddressFamilies=AF_UNIX
+IPAddressDeny=any
+RestrictSUIDSGID=yes
+ReadWritePaths=/var/lib/alienware-battery-monitor

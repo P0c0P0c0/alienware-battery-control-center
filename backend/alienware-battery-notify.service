@@ -1,0 +1,10 @@
+[Unit]
+Description=BAT-05 desktop alert delivery
+ConditionPathIsExecutable=/opt/alienware-battery-monitor/monitor.py
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/alienware-battery-monitor/monitor.py notify
+NoNewPrivileges=yes
+TimeoutStartSec=25

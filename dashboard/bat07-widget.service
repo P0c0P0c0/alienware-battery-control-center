@@ -1,0 +1,18 @@
+[Unit]
+Description=BAT-07 Alienware desktop battery widget
+PartOf=graphical-session.target
+After=graphical-session-pre.target
+StartLimitIntervalSec=60
+StartLimitBurst=4
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -B %h/.local/share/bat07-widget/widget.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+RestrictAddressFamilies=AF_UNIX
+UMask=0077
+
+[Install]
+WantedBy=graphical-session.target

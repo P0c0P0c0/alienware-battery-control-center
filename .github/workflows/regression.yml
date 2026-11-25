@@ -1,0 +1,23 @@
+name: Offline regression
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Run regression without fetching dependencies
+        shell: bash
+        run: |
+          if /usr/bin/python3 -B -c 'import gi, cairo; gi.require_version("Gtk", "3.0"); from gi.repository import Gtk'; then
+            ./tools/test-offline.sh
+          else
+            echo "::notice::GTK bindings are unavailable on this runner. Running core regressions only."
+            ./tools/test-offline.sh --core-only
+          fi
