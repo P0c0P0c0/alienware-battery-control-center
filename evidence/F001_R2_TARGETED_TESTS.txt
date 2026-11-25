@@ -1,0 +1,11 @@
+test_activation_exception_fails_application_and_command_line (test_startup.DisplayReadinessTests.test_activation_exception_fails_application_and_command_line) ... ok
+test_explicit_x11_failure_is_immediate (test_startup.DisplayReadinessTests.test_explicit_x11_failure_is_immediate) ... ok
+test_false_readiness_does_not_start_widget (test_startup.DisplayReadinessTests.test_false_readiness_does_not_start_widget) ... ok
+test_ready_immediately (test_startup.DisplayReadinessTests.test_ready_immediately) ... ok
+test_retries_until_wayland_connects (test_startup.DisplayReadinessTests.test_retries_until_wayland_connects) ... ok
+test_timeout_fails_without_creating_widget (test_startup.DisplayReadinessTests.test_timeout_fails_without_creating_widget) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.014s
+
+OK

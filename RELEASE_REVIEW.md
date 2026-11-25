@@ -43,3 +43,7 @@ The [isolated VM qualification manifest](VM_QUALIFICATION_MANIFEST.md) specifies
 ## ABCC-F001 candidate
 
 The user service retains its audited unit and ten-second acceptance gate. The dashboard retries transient Wayland display failures in its existing process for up to eight seconds, and exits with an error on exhaustion. Four targeted tests and one 39-test offline suite passed. The local release artifacts were rebuilt reproducibly from the committed-file projection. Existing VM preparation edits were preserved outside the candidate. Live GNOME login, compositor readiness, zero-restart startup and the performance acceptance run remain pending. See [F001 rationale and evidence](F001.md).
+
+## ABCC-F001-R2 candidate
+
+The VM exception matched PyGObject GTK 3's cached import-time constructor guard. R2 checks explicit readiness, avoids that stale guard and treats activation exceptions as a failed process. Six targeted tests and one 41-test offline run passed. Artifact hashes and byte-identical rebuilds verified. Live VM startup and performance qualification remain pending. See [R2 investigation and evidence](F001.md#r2--native-readiness-and-failed-activation).

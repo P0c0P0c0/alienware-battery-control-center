@@ -4,9 +4,12 @@ import os
 from pathlib import Path
 import sys
 import time
+import traceback
 sys.dont_write_bytecode = True
 
 import gi
+if hasattr(gi, "disable_legacy_autoinit"):
+    gi.disable_legacy_autoinit()
 gi.require_version("Gtk", "3.0")
 gi.require_version("Gdk", "3.0")
 gi.require_version("GdkPixbuf", "2.0")
@@ -58,6 +61,7 @@ class Widget(Gtk.Application):
     def __init__(self):
         super().__init__(application_id=APP_ID, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
         self.window = None
+        self.activation_failed = False
         self.labels = {}
         self.gauges = {}
         self.images = {}
@@ -83,18 +87,28 @@ class Widget(Gtk.Application):
                 self.window.hide()
         else:
             self.activate()
+            if self.activation_failed:
+                return 1
         return 0
 
     def do_activate(self):
-        if self.window is None:
-            self.create_window()
-            self.refresh()
-            self.timer = GLib.timeout_add(2000, self.refresh)
-        self.window.show_all()
-        self.window.present()
+        try:
+            if self.window is None:
+                self.create_window()
+                self.refresh()
+                self.timer = GLib.timeout_add(2000, self.refresh)
+            self.window.show_all()
+            self.window.present()
+        except Exception:
+            # PyGObject can log an exception from a signal handler and return success.
+            self.activation_failed = True
+            traceback.print_exc()
+            self.quit()
 
     def create_window(self):
-        self.window = Gtk.ApplicationWindow(application=self, title="BAT-07 · Alienware")
+        # The factory avoids the legacy Window override's import-time readiness flag.
+        self.window = Gtk.ApplicationWindow.new(self)
+        self.window.set_title("BAT-07 · Alienware")
         self.window.set_name("bat07-window")
         self.window.set_default_size(WINDOW_WIDTH, -1)
         self.window.set_decorated(False)
@@ -458,8 +472,8 @@ def wait_for_display():
     retry = os.environ.get("XDG_SESSION_TYPE", "") in ("", "wayland")
     deadline = time.monotonic() + DISPLAY_READY_TIMEOUT
     while True:
-        Gtk.init_check()
-        if Gdk.Display.get_default() is not None:
+        initialized, _argv = Gtk.init_check()
+        if initialized and Gdk.Display.get_default() is not None:
             return True
         remaining = deadline - time.monotonic()
         if not retry or remaining <= 0:
@@ -472,7 +486,9 @@ def main():
     if not wait_for_display():
         print("BAT-07: compositor GTK tidak tersedia saat startup", file=sys.stderr)
         return 1
-    return Widget().run(sys.argv)
+    application = Widget()
+    status = application.run(sys.argv)
+    return 1 if application.activation_failed else status
 
 
 if __name__ == "__main__":
