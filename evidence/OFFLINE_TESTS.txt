@@ -11,7 +11,7 @@ test_soh_drop_needs_actual_history (test_monitor.MonitorTests.test_soh_drop_need
 test_temperature_and_soh_boundaries_and_dedup (test_monitor.MonitorTests.test_temperature_and_soh_boundaries_and_dedup) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.029s
+Ran 11 tests in 0.018s
 
 OK
 Firmware differs from the monitored 50–70% policy or is unavailable. Monitoring remains read-only.
@@ -46,6 +46,6 @@ test_cairo_buffers_use_glib_fast_bytes_path (test_r72.RedrawTests.test_cairo_buf
 test_footer_changes_one_fixed_row_and_keeps_stale_color (test_r72.RedrawTests.test_footer_changes_one_fixed_row_and_keeps_stale_color) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 0.061s
+Ran 23 tests in 0.069s
 
 OK

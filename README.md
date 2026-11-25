@@ -9,7 +9,7 @@ An unofficial Linux battery monitoring backend and desktop dashboard for compati
 - The GNOME Shell extension places the Wayland dashboard at the upper right and keeps it above other windows. Drag the header to move it. Settings include opacity.
 - Charge protection is observational. Firmware attributes are read only.
 
-**Screenshot pending.** A sanitized capture from the tested desktop has not been supplied.
+**Screenshot blocked.** No genuine dashboard capture was available in the release evidence.
 
 ## Verified performance
 
@@ -19,4 +19,4 @@ On an Alienware m15 R7 running Ubuntu 26.04.1, GNOME 50 and Wayland, the accepte
 
 See [installation and removal](INSTALLATION.md), [compatibility](COMPATIBILITY.md), [architecture](ARCHITECTURE.md), and [troubleshooting](TROUBLESHOOTING.md). The project writes battery history and alert transitions locally, with a 365-day retention window applied during sampling. There is no upload, analytics, telemetry endpoint or account integration. User-readable database access is controlled by a dedicated local group. History and group membership survive uninstall. The journal and optional desktop notification daemon apply their own retention settings. See [security](SECURITY.md) for sharing and reporting guidance.
 
-The [MIT license draft](LICENSE) awaits owner confirmation. [Release review](RELEASE_REVIEW.md) records the blockers for publication.
+The project uses the [MIT License](LICENSE). [Release review](RELEASE_REVIEW.md) records the blockers for publication.

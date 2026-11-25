@@ -5,3 +5,8 @@ Qualification scope: local build, inspection, extraction and reproducibility.
 - A rebuild from the extracted portable source produced byte-identical archive and package artifacts, and a byte-identical SHA256 manifest.
 - Scanned source text for common credential formats, private-key headers, personal paths and host identities. No matches. The file inventory and archive inspection excluded database, recovery archive, private log, machine manifest and symlink payloads.
 - Live activation, compositor behavior, and remote CI are outside this qualification.
+
+GH-05R1 audit delta
+- The source and installed copyright text name the approved holder. Both Debian control files contain the owner-approved maintainer address.
+- The maintainer address is intentional release metadata. The privacy scan checked for unrelated email addresses, personal paths, host identifiers, private-key headers and common token formats.
+- Runtime source and systemd units were compared against 5f07ff3 and were byte-identical. No screenshot asset was available.

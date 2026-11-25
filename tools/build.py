@@ -116,7 +116,7 @@ Version: {VERSION}
 Section: utils
 Priority: optional
 Architecture: all
-Maintainer: ABCC Release Preparation <release-preparation@users.noreply.invalid>
+Maintainer: Andika Conoras <hidenconoraz@gmail.com>
 Depends: {PACKAGE_DEPS[component]}
 Suggests: {PACKAGE_SUGGESTS[component]}
 Description: Unofficial Alienware battery control center {component} payload

@@ -1,6 +1,6 @@
 # Installation and removal
 
-Use a supported system and read [compatibility](COMPATIBILITY.md) first. Verify the downloaded file hashes against a trusted release manifest. This local v1.0.0 candidate awaits license confirmation and a clean-host smoke test before publication.
+Use a supported system and read [compatibility](COMPATIBILITY.md) first. Verify the downloaded file hashes against a trusted release manifest. This local v1.0.0 candidate awaits a clean-host smoke test before publication.
 
 ## Source or Debian payload
 
