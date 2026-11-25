@@ -1,12 +1,13 @@
 # Installation and removal
 
-Use a supported system and read [compatibility](COMPATIBILITY.md) first. Verify the downloaded file hashes against a trusted release manifest. This local v1.0.0 candidate awaits a clean-host smoke test before publication.
+Use a supported system and read [compatibility](COMPATIBILITY.md) first. Verify the downloaded file hashes against a trusted release manifest. The local v1.0.0 release was qualified in one synthetic-hardware VM. See [qualification evidence](evidence/GH05_QUALIFICATION.md).
 
 ## Source or Debian payload
 
 The source archive contains both components. For privileged operations, use the verified Debian backend payload or place the verified source in an administrator-owned directory with no group/world-writable or symlink ancestors. Invoke privileged Python in isolated mode (`-I`). Run commands from the appropriate admin or user terminal.
 
 The two architecture-independent Debian packages carry source and documentation only. Installing a package through the normal system package manager does not install systemd units, change reader groups or start software. The command paths below refer to package payloads. When using source, substitute the corresponding `backend/deploy.py` or `dashboard/deploy.py` path.
+For a guest where APT rejects local package files, see the [documented offline dpkg workaround](VM_MEDIA_PREPARATION.md#executed-guest-workflow).
 
 ### Backend
 

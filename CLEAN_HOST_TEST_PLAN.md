@@ -1,6 +1,6 @@
 # Clean-host qualification plan
 
-**Pending execution.** Run only after separate authorization on a disposable installation or spare, supported Alienware host. Use Ubuntu 26.04.1, GNOME Shell 50 and Wayland for comparison with the accepted m15 R7 evidence. A VM without Dell battery sysfs can cover package extraction and compatibility refusal. Use physical hardware for telemetry and performance. Keep the active installation outside this plan.
+**Repeatable checklist.** See the [completed VM evidence](evidence/GH05_QUALIFICATION.md) for the user-reported run. Execute any future run only after separate authorization on a disposable installation or spare, supported Alienware host. Use Ubuntu 26.04.1, GNOME Shell 50 and Wayland for comparison with the accepted m15 R7 evidence. A VM without Dell battery sysfs can cover compatibility refusal and synthetic telemetry, service and performance scenarios. Use physical hardware to qualify real telemetry and firmware behavior. Keep the active installation outside this plan.
 
 | Stage | Procedure and acceptance evidence |
 | --- | --- |
@@ -11,4 +11,4 @@
 | Upgrade and rollback | On a disposable snapshot, use an explicitly authorized, trusted fixture payload with a harmless program-only change and identical integration files. Upgrade backend and dashboard separately. Check hashes and the verified `.previous` directories, normal activation and preserved SQLite history. Roll back each component and confirm original program hashes, healthy services and retained history. Use a separately approved deterministic startup-failure fixture on the disposable snapshot to exercise automatic restore. Verify service and artifact state after each step. |
 | Uninstall | Disable optional notifications for test accounts if enabled. Run each managed uninstaller with explicit consent, then remove the package payloads. Verify project units, launcher, extension and program files are removed as applicable. Check that retained history and the reader group remain, and that unrelated files and settings are unchanged. Restore the disposable snapshot. |
 
-Retain sanitized command results, package hashes, test outcomes and any failure details with the audit record. No clean-host steps were run during local release preparation.
+Retain sanitized command results, package hashes, test outcomes and any failure details with the audit record. This final documentation pass did not repeat the clean-host execution.

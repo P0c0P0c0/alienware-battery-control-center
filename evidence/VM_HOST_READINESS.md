@@ -1,4 +1,6 @@
-# Read-only VM host qualification
+# Read-only VM host preparation snapshot
+
+Historical observations from the preparation session. See the [later VM qualification](GH05_QUALIFICATION.md) for the reported execution.
 
 | Prerequisite | Observed |
 | --- | --- |

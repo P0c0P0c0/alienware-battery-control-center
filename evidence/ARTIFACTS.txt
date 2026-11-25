@@ -15,3 +15,8 @@ GH-05R2/R3 documentation-only delta
 - Source archive includes one 385×738 dashboard PNG. The capture was visually checked for identifying account names, serials and unrelated desktop content. PNG CRCs were checked and all ancillary metadata removed without re-encoding the pixels.
 - VM command blocks passed Bash syntax checks and remain unexecuted. No runtime regression suite was repeated for the documentation and asset delta.
 - The source was the existing release-named dashboard capture. Its appearance matches the accepted dashboard layout. The PNG carries no independent process-version attestation.
+
+Final GH-05 release delta
+- Runtime files, unit definitions, build tooling, approved metadata and preserved regression evidence matched the accepted baseline. No suite was rerun.
+- The source archive and both Debian packages rebuilt byte-for-byte from the extracted release source. Archive paths, contents, modes, privacy and SHA256 were checked locally.
+- The offline KVM qualification results are recorded separately as user-reported evidence. Raw guest logs were not included in release artifacts.

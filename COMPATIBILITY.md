@@ -3,7 +3,7 @@
 | Environment | Status |
 | --- | --- |
 | Alienware m15 R7, Ubuntu 26.04.1, GNOME 50 Wayland | Accepted R7.2 widget benchmark. BAT-05 and GNOME integration were active in the supplied evidence. |
-| v1.0.0 package on a clean Ubuntu desktop | Pending. Local tests use synthetic sysfs/SQLite and simulated service management. |
+| v1.0.0 on Ubuntu 26.04.1, KVM, GNOME 50 Wayland, offline QXL/SPICE | User-reported qualification passed with synthetic battery inputs. See [GH-05 evidence](evidence/GH05_QUALIFICATION.md). |
 | Other supported Debian/Ubuntu releases with Python 3.10+, systemd and GTK 3 | Packages build locally. Runtime behavior needs separate validation. Wayland integration requires GNOME Shell 50 and user extensions. |
 | X11 with EWMH above-window support | An explicit preflight checks the hint. Live X11 coverage is pending. |
 | Other Wayland compositors, unsupported GNOME versions, missing BAT0 | Outside the documented installation target. |
