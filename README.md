@@ -1,5 +1,7 @@
 # Alienware Battery Control Center
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24537354.svg)](https://doi.org/10.5281/zenodo.24537354)
+
 An unofficial Linux battery monitoring backend and desktop dashboard for compatible Alienware laptops. This independent project has no affiliation with or endorsement from Dell or Alienware. Device and brand names identify compatibility.
 
 ## Features

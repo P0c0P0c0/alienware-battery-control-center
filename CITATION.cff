@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: Alienware Battery Control Center
+authors:
+  - given-names: Andika
+    family-names: Conoras
+    orcid: https://orcid.org/0009-0007-0322-4981
+version: 1.0.0
+date-released: "2026-11-25"
+doi: 10.5281/zenodo.24537355
+license: MIT
+repository-code: https://github.com/P0c0P0c0/alienware-battery-control-center
