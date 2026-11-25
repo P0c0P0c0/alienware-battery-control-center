@@ -1,0 +1,9 @@
+test_explicit_x11_failure_is_immediate (test_startup.DisplayReadinessTests.test_explicit_x11_failure_is_immediate) ... ok
+test_ready_immediately (test_startup.DisplayReadinessTests.test_ready_immediately) ... ok
+test_retries_until_wayland_connects (test_startup.DisplayReadinessTests.test_retries_until_wayland_connects) ... ok
+test_timeout_fails_without_creating_widget (test_startup.DisplayReadinessTests.test_timeout_fails_without_creating_widget) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+OK

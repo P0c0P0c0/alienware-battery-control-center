@@ -1,0 +1,55 @@
+test_install_uninstall_upgrade_and_failure_keep_synthetic_history (test_deploy.BackendDeploymentTests.test_install_uninstall_upgrade_and_failure_keep_synthetic_history) ... ok
+test_new_state_rejects_a_prepopulated_reader_group (test_deploy.BackendDeploymentTests.test_new_state_rejects_a_prepopulated_reader_group) ... ok
+test_preflight_rejects_missing_dependency_and_unsupported_model (test_deploy.BackendDeploymentTests.test_preflight_rejects_missing_dependency_and_unsupported_model) ... ok
+test_atomic_transaction (test_monitor.MonitorTests.test_atomic_transaction) ... ok
+test_failure_dedup_and_recovery (test_monitor.MonitorTests.test_failure_dedup_and_recovery) ... ok
+test_firmware_and_health_changes (test_monitor.MonitorTests.test_firmware_and_health_changes) ... ok
+test_missing_does_not_clear_active_temperature (test_monitor.MonitorTests.test_missing_does_not_clear_active_temperature) ... ok
+test_read_validation (test_monitor.MonitorTests.test_read_validation) ... ok
+test_retention_and_reports (test_monitor.MonitorTests.test_retention_and_reports) ... ok
+test_soh_drop_needs_actual_history (test_monitor.MonitorTests.test_soh_drop_needs_actual_history) ... ok
+test_temperature_and_soh_boundaries_and_dedup (test_monitor.MonitorTests.test_temperature_and_soh_boundaries_and_dedup) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.078s
+
+OK
+Firmware differs from the monitored 50–70% policy or is unavailable. Monitoring remains read-only.
+test_write_refuses_symlink_targets_and_parents (test_release_ops.FilesystemTests.test_write_refuses_symlink_targets_and_parents) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+test_failed_install_and_scoped_rollback (test_bat07.DeployTests.test_failed_install_and_scoped_rollback) ... ok
+test_backend_latest_history_staleness_and_no_writes (test_bat07.TelemetryTests.test_backend_latest_history_staleness_and_no_writes) ... ok
+test_live_sysfs_has_unit_conversions_and_missing (test_bat07.TelemetryTests.test_live_sysfs_has_unit_conversions_and_missing) ... ok
+test_permission_errors_and_absent_backend (test_bat07.TelemetryTests.test_permission_errors_and_absent_backend) ... ok
+test_desktop_upgrade_and_rollback_in_temporary_home (test_preflight.DesktopReleaseTests.test_desktop_upgrade_and_rollback_in_temporary_home) ... ok
+test_missing_bindings_and_unsupported_desktop (test_preflight.DesktopReleaseTests.test_missing_bindings_and_unsupported_desktop) ... ok
+test_unconfirmed_cli_does_not_dispatch (test_preflight.DesktopReleaseTests.test_unconfirmed_cli_does_not_dispatch) ... ok
+test_database_replacement_and_disappearance (test_r6.SnapshotTests.test_database_replacement_and_disappearance) ... ok
+test_read_only_cache_invalidation_and_rolling_buckets (test_r6.SnapshotTests.test_read_only_cache_invalidation_and_rolling_buckets) ... ok
+test_css_loads_and_rasters_upload_only_on_visual_changes (test_r7.DrawingTests.test_css_loads_and_rasters_upload_only_on_visual_changes) ... ok
+test_gauges_and_protection_use_actual_readings (test_r7.DrawingTests.test_gauges_and_protection_use_actual_readings) ... ok
+test_history_coordinates_skip_missing_samples_and_break_gaps (test_r7.DrawingTests.test_history_coordinates_skip_missing_samples_and_break_gaps) ... ok
+test_live_refresh_and_period_change_use_existing_cache (test_r7.DrawingTests.test_live_refresh_and_period_change_use_existing_cache) ... ok
+test_unchanged_labels_and_style_are_not_written (test_r7.DrawingTests.test_unchanged_labels_and_style_are_not_written) ... ok
+test_pid_change_still_fails (test_r7.VerifierTests.test_pid_change_still_fails) ... ok
+test_strict_cpu_and_rss_limits (test_r7.VerifierTests.test_strict_cpu_and_rss_limits) ... ok
+test_buttons_use_raw_pixbuf_and_accessible_actions (test_r71.ControlTests.test_buttons_use_raw_pixbuf_and_accessible_actions) ... ok
+test_cairo_symbols_are_distinct_transparent_raw_pixels (test_r71.ControlTests.test_cairo_symbols_are_distinct_transparent_raw_pixels) ... ok
+test_popover_toggle_and_css (test_r71.ControlTests.test_popover_toggle_and_css) ... ok
+test_verifier_detects_changed_invocation_and_nonzero_restart (test_r72.MeasurementTests.test_verifier_detects_changed_invocation_and_nonzero_restart) ... ok
+test_axis_change_leaves_plot_and_repeated_selection_reuses_history (test_r72.RedrawTests.test_axis_change_leaves_plot_and_repeated_selection_reuses_history) ... ok
+test_cairo_buffers_use_glib_fast_bytes_path (test_r72.RedrawTests.test_cairo_buffers_use_glib_fast_bytes_path) ... ok
+test_footer_changes_one_fixed_row_and_keeps_stale_color (test_r72.RedrawTests.test_footer_changes_one_fixed_row_and_keeps_stale_color) ... ok
+test_explicit_x11_failure_is_immediate (test_startup.DisplayReadinessTests.test_explicit_x11_failure_is_immediate) ... ok
+test_ready_immediately (test_startup.DisplayReadinessTests.test_ready_immediately) ... ok
+test_retries_until_wayland_connects (test_startup.DisplayReadinessTests.test_retries_until_wayland_connects) ... ok
+test_timeout_fails_without_creating_widget (test_startup.DisplayReadinessTests.test_timeout_fails_without_creating_widget) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.074s
+
+OK

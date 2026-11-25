@@ -1,6 +1,7 @@
 # Changelog
 
 ## 1.0.0 — local release candidate
+- F001 adds a bounded Wayland display-readiness check before dashboard startup. Live login acceptance remains pending.
 
 - Consolidated BAT-05 and the accepted BAT-07R7.2 dashboard.
 - Retained the two-second live display, read-only SQLite cache, Cairo controls, separately cached chart rasters, fixed-height footer and GNOME 50 integration.

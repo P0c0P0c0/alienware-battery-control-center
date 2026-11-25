@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 import datetime
+import os
 from pathlib import Path
 import sys
+import time
 sys.dont_write_bytecode = True
 
 import gi
@@ -446,10 +448,32 @@ class Widget(Gtk.Application):
         return pixels
 
 
-if __name__ == "__main__":
+DISPLAY_READY_TIMEOUT = 8
+DISPLAY_READY_INTERVAL = 0.25
+
+
+def wait_for_display():
+    # The user service can start before the Wayland display accepts connections.
+    # An unset session type is possible while the graphical session starts.
+    retry = os.environ.get("XDG_SESSION_TYPE", "") in ("", "wayland")
+    deadline = time.monotonic() + DISPLAY_READY_TIMEOUT
+    while True:
+        Gtk.init_check()
+        if Gdk.Display.get_default() is not None:
+            return True
+        remaining = deadline - time.monotonic()
+        if not retry or remaining <= 0:
+            return False
+        time.sleep(min(DISPLAY_READY_INTERVAL, remaining))
+
+
+def main():
     GLib.set_prgname(APP_ID)
-    Gtk.init_check()
-    if Gdk.Display.get_default() is None:
-        print("BAT-07: GTK tidak dapat terhubung ke compositor", file=sys.stderr)
-        sys.exit(1)
-    sys.exit(Widget().run(sys.argv))
+    if not wait_for_display():
+        print("BAT-07: compositor GTK tidak tersedia saat startup", file=sys.stderr)
+        return 1
+    return Widget().run(sys.argv)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
