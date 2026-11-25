@@ -9,7 +9,9 @@ An unofficial Linux battery monitoring backend and desktop dashboard for compati
 - The GNOME Shell extension places the Wayland dashboard at the upper right and keeps it above other windows. Drag the header to move it. Settings include opacity.
 - Charge protection is observational. Firmware attributes are read only.
 
-**Screenshot blocked.** No genuine dashboard capture was available in the release evidence.
+![BAT-07R7.2 dashboard showing battery health, charge, protection limits and history](assets/screenshots/dashboard.png)
+
+Genuine R7.2 dashboard capture with PNG metadata removed. The displayed telemetry belongs to the capture session.
 
 ## Verified performance
 

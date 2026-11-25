@@ -10,3 +10,8 @@ GH-05R1 audit delta
 - The source and installed copyright text name the approved holder. Both Debian control files contain the owner-approved maintainer address.
 - The maintainer address is intentional release metadata. The privacy scan checked for unrelated email addresses, personal paths, host identifiers, private-key headers and common token formats.
 - Runtime source and systemd units were compared against 5f07ff3 and were byte-identical. No screenshot asset was available.
+
+GH-05R2/R3 documentation-only delta
+- Source archive includes one 385×738 dashboard PNG. The capture was visually checked for identifying account names, serials and unrelated desktop content. PNG CRCs were checked and all ancillary metadata removed without re-encoding the pixels.
+- VM command blocks passed Bash syntax checks and remain unexecuted. No runtime regression suite was repeated for the documentation and asset delta.
+- The source was the existing release-named dashboard capture. Its appearance matches the accepted dashboard layout. The PNG carries no independent process-version attestation.
